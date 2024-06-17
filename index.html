@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>nike</title>
+    <link rel="stylesheet" href="./styles.css">
+  
+
+    <!-- Vendor Script -->
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <header class="header" id="header">
+        <nav class="navbar container">
+            <img src="./logo.png" alt="logo" height="auto" width="100px">
+           <div class="burger" id="burger">
+              <span class="burger-line"></span>
+              <span class="burger-line"></span>
+              <span class="burger-line"></span>
+           </div>
+           <div class="menu" id="menu">
+              <ul class="menu-inner">
+                 <li class="menu-item"><a href="#" class="menu-link">Home</a></li>
+                 <li class="menu-item"><a href="#about" class="menu-link">About</a></li>
+                 <li class="menu-item"><a href="#Collection" class="menu-link">Collections</a></li>
+                 <li class="menu-item"><a href="#contact" class="menu-link">Contact us</a></li>
+              </ul>
+           </div>
+           <button class="switch" id="switch"></button>
+              <i class="switch-light bx bx-sun"></i>
+              <i class="switch-dark bx bx-moon"></i>
+           </button>
+        </nav>
+     </header>
+     <main class="main">
+        <section class="section banner banner-section">
+           <div class="container banner-column">
+              <img class="banner-image" src="./home.png" alt="Illustration">
+              <div class="banner-inner">
+                 <h1 class="heading-xl">All Your Shoe Collection in Page</h1>
+                 <p class="paragraph">
+                    Nike is a global leader in athletic footwear, renowned for its innovative designs and advanced technology in sports performance.
+                 </p>
+                 <button class="btn btn-darken btn-inline">
+                    SHOP NOW<i class="bx bx-right-arrow-alt"></i>
+                 </button>
+              </div>
+           </div>
+        </section>
+     </main>
+    <div class="container" id="about">
+        <div class="imgBx">
+            <img src="https://github.com/anuzbvbmaniac/Responsive-Product-Card---CSS-ONLY/blob/master/assets/img/jordan_proto.png?raw=true" alt="Nike Jordan Proto-Lyte Image">
+        </div>
+        <div class="details">
+            <div class="content">
+                <h2>Jordan Proto-Lyte <br>
+                    <span>Running Collection</span>
+                </h2>
+                <p>
+                    Featuring soft foam cushioning and lightweight, woven fabric in the upper, the Jordan Proto-Lyte is
+                    made for all-day, bouncy comfort.
+                    Lightweight Breathability: Lightweight woven fabric with real or synthetic leather provides
+                    breathable support.
+                    Cushioned Comfort: A full-length foam midsole delivers lightweight, plush cushioning.
+                    Secure Traction: Exaggerated herringbone-pattern outsole offers traction on a variety of surfaces.
+                </p>
+                <p class="product-colors">Available Colors:
+                    <span class="black active" data-color-primary="#000" data-color-sec="#212121" data-pic="https://github.com/anuzbvbmaniac/Responsive-Product-Card---CSS-ONLY/blob/master/assets/img/jordan_proto.png?raw=true"></span>
+                    <span class="red" data-color-primary="#7E021C" data-color-sec="#bd072d" data-pic="https://github.com/anuzbvbmaniac/Responsive-Product-Card---CSS-ONLY/blob/master/assets/img/jordan_proto_red_black.png?raw=true"></span>
+                    <span class="orange" data-color-primary="#CE5B39" data-color-sec="#F18557" data-pic="https://github.com/anuzbvbmaniac/Responsive-Product-Card---CSS-ONLY/blob/master/assets/img/jordan_proto_orange_black.png?raw=true"></span>
+                </p>
+                <h3>Rs. 12,800</h3>
+                <button>Buy Now</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Change The Picture and Associated Element Color when Color Options Are Clicked.
+        $(".product-colors span").click(function() {
+            $(".product-colors span").removeClass("active");
+            $(this).addClass("active");
+            $(".active").css("border-color", $(this).attr("data-color-sec"))
+            // $("body").css("background", $(this).attr("data-color-primary"));
+            $(".content h2").css("color", $(this).attr("data-color-sec"));
+            $(".content h3").css("color", $(this).attr("data-color-sec"));
+             $(".container .imgBx").css("background", $(this).attr("data-color-sec"));
+            $(".container .details button").css("background", $(this).attr("data-color-sec"));
+            $(".imgBx img").attr('src', $(this).attr("data-pic"));
+        });
+    </script>
+    
+
+
+
+
+
+
+
+
+    <div class="container2" id="Collection">
+        <div class="card">
+            <div class="imgBx">
+                <img src="./Nike-Shoes.png" alt="nike-air-shoe">
+            </div>
+
+            <div class="contentBx">
+
+                <h2>Nike Shoes</h2>
+
+                <div class="size">
+                    <h3>Size :</h3>
+                    <span>7</span>
+                    <span>8</span>
+                    <span>9</span>
+                    <span>10</span>
+                </div>
+
+              
+                <a href="#">Buy Now</a>
+            </div>
+
+        </div>
+
+
+        <div class="card">
+            <div class="imgBx">
+                <img src="http://pngimg.com/uploads/running_shoes/running_shoes_PNG5782.png" alt="nike-air-shoe">
+            </div>
+
+            <div class="contentBx">
+
+                <h2>Nike Shoes</h2>
+
+                <div class="size">
+                    <h3>Size :</h3>
+                    <span>7</span>
+                    <span>8</span>
+                    <span>9</span>
+                    <span>10</span>
+                </div>
+
+                
+                <a href="#">Buy Now</a>
+            </div>
+
+        </div>
+
+
+
+        <div class="card">
+            <div class="imgBx">
+                <img class="card3" src="./Shoes-4.png"  alt="nike-air-shoe">
+            </div>
+
+            <div class="contentBx">
+
+                <h2>Nike Shoes</h2>
+
+                <div class="size">
+                    <h3>Size :</h3>
+                    <span>7</span>
+                    <span>8</span>
+                    <span>9</span>
+                    <span>10</span>
+                </div>
+
+               
+                <a href="#">Buy Now</a>
+            </div>
+
+        </div>
+    </div>
+  <h2 id="contact">Contact Us</h2>
+       <hr>
+        <div class="contactus" >
+            <section class="us">
+                <img width="48" height="48" src="https://img.icons8.com/windows/48/chat.png" alt="chat"/>
+                <h2>Chat with us</h2>
+                <p>06:00 - 23:59<br>7 days a week</p>
+            </section>
+            <section  class="us">
+                <img width="48" height="48" src="https://img.icons8.com/ios/50/apple-phone.png" alt="apple-phone"/>
+                <h2>Call us</h2>
+                <p>10:00 - 19:00, <br>
+                    Monday - Friday</p>
+            
+            </section>
+            
+        </div>
+    
+   
+ 
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    const navbarMenu = document.getElementById("menu");
+const burgerMenu = document.getElementById("burger");
+const headerMenu = document.getElementById("header");
+const overlayMenu = document.querySelector(".overlay");
+
+// Open Close Navbar Menu on Click Burger
+if (burgerMenu && navbarMenu) {
+   burgerMenu.addEventListener("click", () => {
+      burgerMenu.classList.toggle("is-active");
+      navbarMenu.classList.toggle("is-active");
+   });
+}
+
+// Close Navbar Menu on Click Links
+document.querySelectorAll(".menu-link").forEach((link) => {
+   link.addEventListener("click", () => {
+      burgerMenu.classList.remove("is-active");
+      navbarMenu.classList.remove("is-active");
+   });
+});
+
+// Fixed Navbar Menu on Window Resize
+window.addEventListener("resize", () => {
+   if (window.innerWidth >= 992) {
+      if (navbarMenu.classList.contains("is-active")) {
+         navbarMenu.classList.remove("is-active");
+         overlayMenu.classList.remove("is-active");
+      }
+   }
+});
+
+// Dark and Light Mode on Switch Click
+document.addEventListener("DOMContentLoaded", () => {
+   const darkSwitch = document.getElementById("switch");
+
+   darkSwitch.addEventListener("click", () => {
+      document.documentElement.classList.toggle("darkmode");
+      document.body.classList.toggle("darkmode");
+   });
+});
+
+</script>
+
+
+
+
+</body>
+
+</html>
